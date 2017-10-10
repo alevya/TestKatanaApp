@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwin\SelfHostOwin.csproj", "{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHostOwin", "WebHostOwin\WebHostOwin.csproj", "{A5670D92-6066-4173-9440-3A8033EFFF33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5670D92-6066-4173-9440-3A8033EFFF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5670D92-6066-4173-9440-3A8033EFFF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7F12D01-5086-47A3-85BA-88AA36750FFD}
+	EndGlobalSection
+EndGlobal
