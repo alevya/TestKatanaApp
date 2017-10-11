@@ -1,6 +1,7 @@
 ﻿using System;
 using System.EnterpriseServices;
 using System.Threading.Tasks;
+using AremtyCore;
 using Microsoft.Owin;
 using Owin;
 
@@ -12,17 +13,16 @@ namespace WebHostOwin
     {
         public void Configuration(IAppBuilder app)
         {
+
+            //ServiceApplication app = new ServiceApplication();
+            //app.Init();
+
             app.Run(context =>
             {
                 //context.Response.ContentType = "text/html; charset=utf-8";
                 //return context.Response.WriteAsync("<h2>Hello, world!</h2>");
                 return Task.Delay(0);
             });
-        }
-
-        private void _start()
-        {
-            
         }
     }
 }

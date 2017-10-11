@@ -2,7 +2,7 @@
 using System.Linq;
 using NLog;
 
-namespace AremryCore.Plugins
+namespace AremtyCore.Plugins
 {
     public abstract class PluginBase
     {

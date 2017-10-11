@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AremtyCore;
 using NLog;
-using NLog.Fluent;
 
-namespace AremryCore
+namespace AremtyCore
 {
     public class ServiceApplication
     {
@@ -20,6 +16,9 @@ namespace AremryCore
         {
             try
             {
+                //Load plugins dll
+
+
                 foreach (var plugin  in _appContext.GetPlugins())
                 {
                     _logger.Info("init plugin: {0}", plugin.GetType().FullName);
