@@ -1,4 +1,5 @@
 ﻿using System;
+using System.EnterpriseServices;
 using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
@@ -13,9 +14,15 @@ namespace WebHostOwin
         {
             app.Run(context =>
             {
-                context.Response.ContentType = "text/html; charset=utf-8";
-                return context.Response.WriteAsync("<h2>Hello, world!</h2>");
+                //context.Response.ContentType = "text/html; charset=utf-8";
+                //return context.Response.WriteAsync("<h2>Hello, world!</h2>");
+                return Task.Delay(0);
             });
+        }
+
+        private void _start()
+        {
+            
         }
     }
 }
