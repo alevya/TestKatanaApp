@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AremryCore.Plugins;
 
-namespace Core
+namespace AremtyListener
 {
-    public class Class1
+    class ListenerPlugin : PluginBase
     {
     }
 }
