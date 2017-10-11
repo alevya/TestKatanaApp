@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHostOwin", "WebHostOwin\WebHostOwin.csproj", "{A5670D92-6066-4173-9440-3A8033EFFF33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listener", "Listener\Listener.csproj", "{6E899B69-6898-49CE-AE42-8DB373482860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{EDF18164-686B-49CE-98A6-BC073E74042E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A5670D92-6066-4173-9440-3A8033EFFF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E899B69-6898-49CE-AE42-8DB373482860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E899B69-6898-49CE-AE42-8DB373482860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E899B69-6898-49CE-AE42-8DB373482860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E899B69-6898-49CE-AE42-8DB373482860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF18164-686B-49CE-98A6-BC073E74042E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF18164-686B-49CE-98A6-BC073E74042E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF18164-686B-49CE-98A6-BC073E74042E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF18164-686B-49CE-98A6-BC073E74042E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
