@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.Composition.Hosting;
+using System.IO;
 using AremtyCore;
 using NLog;
 
@@ -17,6 +19,7 @@ namespace AremtyCore
             try
             {
                 //Load plugins dll
+                LoadPlugins();
 
 
                 foreach (var plugin  in _appContext.GetPlugins())
@@ -27,11 +30,27 @@ namespace AremtyCore
             }
             catch (Exception e)
             {
-                _logger.Error(e, "Ошибка инициализации приложения при загрузке плагинов");
+                _logger.Error(e, "Error initializing the application when loading plug-ins");
                 throw;
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        private void LoadPlugins()
+        {
+            _logger.Info("Load plugins");
+            var aggCatalog = new AggregateCatalog();
+            var pluginsDir = new DirectoryInfo(AppSettings.PluginsPath);
+
+            foreach (var dir  in pluginsDir.GetDirectories() )
+            {
+                
+            }
+
+        }
         #endregion
     }
 }
