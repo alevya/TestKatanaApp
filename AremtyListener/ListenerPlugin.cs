@@ -7,6 +7,7 @@ using AremtyCore.Plugins;
 
 namespace AremtyListener
 {
+    [Plugin]
     class ListenerPlugin : PluginBase
     {
     }
