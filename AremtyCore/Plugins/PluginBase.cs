@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Composition;
 using System.Linq;
 using NLog;
 
@@ -7,6 +8,8 @@ namespace AremtyCore.Plugins
     public abstract class PluginBase
     {
         #region Init
+        [Import(typeof(IServiceApplicationContext))]
+        private IServiceApplicationContext _context; 
 
         protected PluginBase()
         {
@@ -37,6 +40,8 @@ namespace AremtyCore.Plugins
         #region aux
 
         protected Logger Logger { get; }
+
+        protected IServiceApplicationContext Context => _context;
 
         public void Run<T>(T[] actions, Action<T> task)
         {

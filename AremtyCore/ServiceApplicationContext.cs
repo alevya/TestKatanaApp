@@ -9,6 +9,7 @@ namespace AremtyCore
     [Export(typeof(IServiceApplicationContext))]
     public class ServiceApplicationContext : IServiceApplicationContext
     {
+        [ImportMany(typeof(PluginBase))]
         protected HashSet<PluginBase> Plugins { get; set; }
 
         public IReadOnlyCollection<PluginBase> GetPlugins()

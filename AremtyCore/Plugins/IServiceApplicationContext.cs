@@ -2,7 +2,7 @@
 
 namespace AremtyCore.Plugins
 {
-    interface IServiceApplicationContext
+    public interface IServiceApplicationContext
     {
         IReadOnlyCollection<PluginBase> GetPlugins();
         T GetPlugin<T>() where T : PluginBase;
