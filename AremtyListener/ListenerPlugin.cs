@@ -8,12 +8,13 @@ using System.Configuration;
 using Owin;
 using Microsoft.Owin.Hosting;
 
+
 namespace AremtyListener
 {
     [Plugin]
     public class ListenerPlugin : PluginBase
     {
-        private const string BASE_URL = "http://localhost:{0}";
+        private const string BASE_URL = "http://+:{0}";
         private IDisposable _srv;
 
         private static string BaseUrl
@@ -27,16 +28,7 @@ namespace AremtyListener
 
         public override void Start()
         {
-            //_srv = WebApp.Start<Startup>(BaseUrl);
-            _srv = WebApp.Start(BaseUrl, ConfigureModules);
-        }
-
-        private void ConfigureModules(IAppBuilder appBuilder)
-        {
-            appBuilder
-                //.Use<ListenerModule>(registeredHandlers, Logger)
-                //.MapSignalR(new HubConfiguration { EnableJavaScriptProxies = false, EnableJSONP = HubEnableJsonp })
-                .Use<Error404Module>();
+            _srv = WebApp.Start<Startup>(BaseUrl);
         }
 
         public override void Stop()

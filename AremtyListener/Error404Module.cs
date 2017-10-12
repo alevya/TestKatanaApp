@@ -7,11 +7,12 @@ using Microsoft.Owin;
 
 namespace AremtyListener
 {
+    using AppFunc = Func<IDictionary<string, object>, Task>;
     public class Error404Module
     {
-        private readonly Func<IDictionary<string, object>, Task> next;
+        private readonly AppFunc next;
 
-        public Error404Module(Func<IDictionary<string, object>, Task> next)
+        public Error404Module(AppFunc next)
         {
             this.next = next ?? throw new ArgumentNullException(nameof(next));
         }
