@@ -5,6 +5,7 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwin\SelfHostOwin.csproj", "{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}"
 	ProjectSection(ProjectDependencies) = postProject
+		{6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9} = {6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9}
 		{EDF18164-686B-49CE-98A6-BC073E74042E} = {EDF18164-686B-49CE-98A6-BC073E74042E}
 	EndProjectSection
 EndProject

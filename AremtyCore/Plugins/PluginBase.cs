@@ -9,7 +9,7 @@ namespace AremtyCore.Plugins
     {
         #region Init
         [Import(typeof(IServiceApplicationContext))]
-        private IServiceApplicationContext _context; 
+        private IServiceApplicationContext _context;
 
         protected PluginBase()
         {
@@ -27,7 +27,6 @@ namespace AremtyCore.Plugins
 
         public virtual void Start()
         {
-            
         }
 
         public virtual void Stop()
