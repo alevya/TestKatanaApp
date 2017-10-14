@@ -13,16 +13,14 @@ namespace WebHostOwin
     {
         public void Configuration(IAppBuilder app)
         {
+            var aremtyApp = new ServiceApplication();
+            aremtyApp.Init();
+            aremtyApp.StartServices();
 
-            //ServiceApplication app = new ServiceApplication();
-            //app.Init();
+            Console.WriteLine("Service is start. Press ENTER key to exit");
+            Console.ReadLine();
 
-            app.Run(context =>
-            {
-                //context.Response.ContentType = "text/html; charset=utf-8";
-                //return context.Response.WriteAsync("<h2>Hello, world!</h2>");
-                return Task.Delay(0);
-            });
+            aremtyApp.StopServices();
         }
     }
 }
