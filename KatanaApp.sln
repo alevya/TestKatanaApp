@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwin\SelfHostOwin.csproj", "{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwi
 		{EDF18164-686B-49CE-98A6-BC073E74042E} = {EDF18164-686B-49CE-98A6-BC073E74042E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHostOwin", "WebHostOwin\WebHostOwin.csproj", "{A5670D92-6066-4173-9440-3A8033EFFF33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHostOwin\WebHost.csproj", "{A5670D92-6066-4173-9440-3A8033EFFF33}"
 	ProjectSection(ProjectDependencies) = postProject
 		{EDF18164-686B-49CE-98A6-BC073E74042E} = {EDF18164-686B-49CE-98A6-BC073E74042E}
 	EndProjectSection

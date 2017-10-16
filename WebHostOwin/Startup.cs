@@ -1,26 +1,43 @@
 ﻿using System;
-using System.EnterpriseServices;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.IO;
+using System.Web;
+using System.Web.Hosting;
 using AremtyCore;
-using Microsoft.Owin;
-using Owin;
+using WebHost;
 
-[assembly: OwinStartup(typeof(WebHostOwin.Startup))]
+//[assembly: OwinStartup(typeof(WebHostOwin.Startup))]
+[assembly: PreApplicationStartMethod(typeof(Startup), "StartupMethod")]
 
-namespace WebHostOwin
+namespace WebHost
 {
     public class Startup
     {
-        public void Configuration(IAppBuilder app)
+        private static readonly DirectoryInfo _pluginsDirectory;
+        static Startup()
         {
+            string pluginPath = HostingEnvironment.MapPath("~/Plugins");
+            ConfigurationManager.AppSettings["pluginsDirectory"] = pluginPath;
+
+            if (pluginPath == null)
+            {
+                throw new DirectoryNotFoundException("Plugins");
+            }
+            _pluginsDirectory = new DirectoryInfo(pluginPath);
+        }
+
+        public static void StartupMethod()
+        {
+            //Directory.CreateDirectory(_pluginsDirectory.FullName);
+
+            
             var aremtyApp = new ServiceApplication();
             aremtyApp.Init();
             aremtyApp.StartServices();
 
-            Console.WriteLine("Service is start. Press ENTER key to exit");
-            Console.ReadLine();
-
             aremtyApp.StopServices();
         }
+
+
     }
 }
