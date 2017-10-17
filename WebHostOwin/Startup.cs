@@ -34,8 +34,9 @@ namespace WebHost
             var aremtyApp = new ServiceApplication();
             aremtyApp.Init();
             aremtyApp.StartServices();
+            //Console.ReadLine();
 
-            aremtyApp.StopServices();
+            //aremtyApp.StopServices();
         }
 
 

@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Plugins\AremtyListener\AremtyCore.dll.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -74,12 +75,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Plugins\AremtyListener\AremtyCore.dll" />
+    <Content Include="Plugins\AremtyListener\AremtyCore.pdb" />
+    <Content Include="Plugins\AremtyListener\AremtyListener.dll" />
+    <Content Include="Plugins\AremtyListener\AremtyListener.pdb" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.dll" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Host.HttpListener.dll" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Host.HttpListener.xml" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Hosting.dll" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.Hosting.xml" />
+    <Content Include="Plugins\AremtyListener\Microsoft.Owin.xml" />
+    <Content Include="Plugins\AremtyListener\NLog.dll" />
+    <Content Include="Plugins\AremtyListener\NLog.xml" />
+    <Content Include="Plugins\AremtyListener\Owin.dll" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
