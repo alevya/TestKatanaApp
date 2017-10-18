@@ -2,11 +2,12 @@
 using System.IO;
 using System.Web;
 using System.Web.Hosting;
-using AremtyCore;
+using Microsoft.Owin;
 using Owin;
 using WebHost;
 
-//[assembly: OwinStartup(typeof(Startup))]
+
+[assembly: OwinStartup(typeof(Startup))]
 [assembly: PreApplicationStartMethod(typeof(Startup), "StartupMethod")]
 
 namespace WebHost

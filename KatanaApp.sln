@@ -9,16 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostOwin", "SelfHostOwi
 		{EDF18164-686B-49CE-98A6-BC073E74042E} = {EDF18164-686B-49CE-98A6-BC073E74042E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHostOwin\WebHost.csproj", "{A5670D92-6066-4173-9440-3A8033EFFF33}"
-	ProjectSection(ProjectDependencies) = postProject
-		{EDF18164-686B-49CE-98A6-BC073E74042E} = {EDF18164-686B-49CE-98A6-BC073E74042E}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AremtyListener", "AremtyListener\AremtyListener.csproj", "{6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AremtyCore", "AremtyCore\AremtyCore.csproj", "{EDF18164-686B-49CE-98A6-BC073E74042E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{833E6A8A-3A45-4193-A413-D11E4348DFE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHost", "WebHost\WebHost.csproj", "{00E49C07-F7DA-43D6-9D7C-5D38DD948C05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +27,6 @@ Global
 		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983C4E8E-5D51-403D-BCD3-AB1DC195CB84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5670D92-6066-4173-9440-3A8033EFFF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5670D92-6066-4173-9440-3A8033EFFF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5670D92-6066-4173-9440-3A8033EFFF33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F573962-A9C3-4FDA-96A3-9C1AF5F8F9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,6 +35,10 @@ Global
 		{EDF18164-686B-49CE-98A6-BC073E74042E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF18164-686B-49CE-98A6-BC073E74042E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF18164-686B-49CE-98A6-BC073E74042E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E49C07-F7DA-43D6-9D7C-5D38DD948C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E49C07-F7DA-43D6-9D7C-5D38DD948C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E49C07-F7DA-43D6-9D7C-5D38DD948C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E49C07-F7DA-43D6-9D7C-5D38DD948C05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
