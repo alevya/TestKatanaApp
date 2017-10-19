@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\AremtyProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modules\Error404Module.cs" />
+    <Compile Include="Modules\LoggerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

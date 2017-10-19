@@ -10,16 +10,16 @@ namespace WebHost.Modules
 
     public class Error404Module
     {
-        private readonly AppFunc next;
+        private readonly AppFunc _next;
 
         public Error404Module(AppFunc next)
         {
-            this.next = next ?? throw new ArgumentNullException("next");
+            this._next = next ?? throw new ArgumentNullException("next");
         }
 
         public Task Invoke(IDictionary<string, object> env)
         {
-            var body = Encoding.UTF8.GetBytes("404");
+            var body = Encoding.UTF8.GetBytes("Not Found");
 
             var response = new OwinResponse(env)
             {
