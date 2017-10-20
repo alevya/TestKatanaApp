@@ -19,7 +19,9 @@ namespace WebHost
             //config.Routes.MapHttpRoute("default", "{controller}");
             //appBuilder.UseWebApi(config);
 
-            appBuilder.Use<Error404Module>();
+            appBuilder.Use(typeof(LoggerModule), "Logger module")
+                .Use<Error404Module>();
+
 
 
         }
