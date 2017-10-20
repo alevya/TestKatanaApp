@@ -1,19 +1,18 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 
-namespace WebHost.Modules
+namespace WebHost.Modules.HandlersModule
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 
     internal class HandlersModule
     {
         private readonly AppFunc _next;
-        private readonly Dictionary<string, IHandler> _handlers;
-
-        public HandlersModule(AppFunc next, Dictionary<string, IHandler> handlers)
+        private readonly ConcurrentDictionary<string, IHandler> _handlers;
+       
+        public HandlersModule(AppFunc next, ConcurrentDictionary<string, IHandler> handlers)
         {
             _next = next;
             _handlers = handlers;
@@ -23,7 +22,7 @@ namespace WebHost.Modules
         {
             try
             {
-
+              
             }
             catch (Exception e)
             {
