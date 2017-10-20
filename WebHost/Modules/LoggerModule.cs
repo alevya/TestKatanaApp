@@ -4,12 +4,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Owin.Types;
+
 
 namespace WebHost.Modules
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 
-    public class LoggerModule
+    internal class LoggerModule
     {
         private readonly AppFunc _next;
         private readonly string _prefix;
@@ -24,7 +26,7 @@ namespace WebHost.Modules
         {
             try
             {
-                Debug.WriteLine("{0} Request: {1}", _prefix, env["owin.RequestPath"]);
+                Debug.WriteLine("{0} Request: {1}", _prefix, env[OwinConstants.RequestPath]);
             }
             catch (Exception e)
             {

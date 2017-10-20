@@ -61,6 +61,9 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Owin.Types, Version=0.8.5.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.Types.0.8.5\lib\net40\Owin.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -102,6 +105,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\Extensions\OwinRequestExtensions.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\Helpers\OwinHelpers.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinConstants.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinOpaque.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinOpaqueParameters.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinRequest.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinResponse.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinWebSocket.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinWebSocketParameters.cs" />
+    <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinWebSocketReceiveMessage.cs" />
     <Compile Include="Modules\Error404Module.cs" />
     <Compile Include="Modules\LoggerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

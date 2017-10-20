@@ -8,7 +8,7 @@ namespace WebHost.Modules
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 
-    public class Error404Module
+    internal class Error404Module
     {
         private readonly AppFunc _next;
 
@@ -19,7 +19,8 @@ namespace WebHost.Modules
 
         public Task Invoke(IDictionary<string, object> env)
         {
-            var body = Encoding.UTF8.GetBytes("Not Found");
+            var body = Encoding.UTF8.GetBytes("Sorry, but the requested address does not exist!");
+
 
             var response = new OwinResponse(env)
             {
