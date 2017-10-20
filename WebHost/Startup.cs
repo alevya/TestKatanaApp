@@ -23,16 +23,17 @@ namespace WebHost
             //var config = new HttpConfiguration();
             //config.Routes.MapHttpRoute("default", "{controller}");
             //appBuilder.UseWebApi(config);
-
+            Dictionary<string, IHandler> handlers = new Dictionary<string, IHandler>();
             appBuilder
-                .Use(new Func<AppFunc, AppFunc>(next =>
+                //.Use(new Func<AppFunc, AppFunc>(next =>
                 
-                    new AppFunc(env =>
-                        {
-                            return next(env);
-                        }
-                    )))
+                //    new AppFunc(env =>
+                //        {
+                //            return next(env);
+                //        }
+                //    )))
                 .Use(typeof(LoggerModule), "Logger module")
+                .Use<HandlersModule>(handlers)
                 .Use<Error404Module>();
 
 
