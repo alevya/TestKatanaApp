@@ -118,6 +118,7 @@
     <Compile Include="App_Packages\Owin.Types.Sources.0.8.5\OwinWebSocketReceiveMessage.cs" />
     <Compile Include="Components\WebUI\WebUI.cs" />
     <Compile Include="Modules\Error404Module.cs" />
+    <Compile Include="Modules\HandlersModule\ApiHandler.cs" />
     <Compile Include="Modules\HandlersModule\HandlersModule.cs" />
     <Compile Include="Modules\HandlersModule\HttpCommandAttribute.cs" />
     <Compile Include="Modules\HandlersModule\HttpRequestParams.cs" />

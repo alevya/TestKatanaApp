@@ -71,7 +71,9 @@ namespace WebHost
             var handlers = new ConcurrentDictionary<string, IHandler>();
             foreach (var item in RequestReceived)
             {
-                
+                var url = item.Metadata.Url;
+                var h = new ApiHandler(item.Value);
+                handlers.TryAdd(url, h);
             }
             return handlers;
         }

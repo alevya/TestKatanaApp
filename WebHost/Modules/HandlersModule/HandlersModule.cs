@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Owin;
 
 namespace WebHost.Modules.HandlersModule
 {
@@ -22,7 +23,14 @@ namespace WebHost.Modules.HandlersModule
         {
             try
             {
-              
+                var request = new OwinRequest(env);
+                IHandler handler;
+                var path = request.Path.ToString();
+                if (_handlers.TryGetValue(path,out handler))
+                {
+                    return handler.ProcesseRequest(request);
+                }
+
             }
             catch (Exception e)
             {

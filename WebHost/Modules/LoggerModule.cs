@@ -26,7 +26,11 @@ namespace WebHost.Modules
         {
             try
             {
-                Debug.WriteLine("{0} Request: {1}", _prefix, env[OwinConstants.RequestPath]);
+                var path = env[OwinConstants.RequestPath];
+                Debug.WriteLine("{0} Request: {1}", _prefix, path);
+
+
+                
             }
             catch (Exception e)
             {

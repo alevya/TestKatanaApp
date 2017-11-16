@@ -16,7 +16,7 @@ namespace WebHost.Components.WebUI
         [HttpCommand("/")]
         public object Get(HttpRequestParams reqParam)
         {
-            return new List<string>();
+            return "Test Api";
         }
     }
 }

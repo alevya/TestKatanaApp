@@ -1,6 +1,10 @@
-﻿namespace WebHost.Modules.HandlersModule
+﻿using System.Threading.Tasks;
+using Microsoft.Owin;
+
+namespace WebHost.Modules.HandlersModule
 {
-    interface IHandler
+    public interface IHandler
     {
+        Task ProcesseRequest(OwinRequest request);
     }
 }
