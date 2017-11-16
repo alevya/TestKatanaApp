@@ -8,6 +8,11 @@ namespace WebHost.Components.WebUI
 {
     public class WebUI
     {
+        public WebUI()
+        {
+            
+        }
+
         [HttpCommand("/")]
         public object Get(HttpRequestParams reqParam)
         {

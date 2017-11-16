@@ -12,7 +12,7 @@ namespace WebHost.Modules.HandlersModule
     [AttributeUsage(AttributeTargets.Method)]
     public class HttpCommandAttribute : ExportAttribute, IHttpCommandAttribute
     {
-        public HttpCommandAttribute(string url) : base("HttpCommand", typeof(Func<HttpRequestParams, object>))
+        public HttpCommandAttribute(string url) : base("{DD74B74D-BEDD-48EC-981C-D85FEEBC55A6}", typeof(Func<HttpRequestParams, object>))
         {
             Url = url;
         }
