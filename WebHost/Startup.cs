@@ -22,7 +22,7 @@ namespace WebHost
 
     public class Startup
     {
-        [ImportMany("{DD74B74D-BEDD-48EC-981C-D85FEEBC55A6}")]
+        [ImportMany("HttpCommand")]
         public Lazy<Func<HttpRequestParams, object>, IHttpCommandAttribute>[] RequestReceived { get; set; }
 
         private ConcurrentDictionary<string, IHandler> _handlers = new ConcurrentDictionary<string, IHandler>();
@@ -51,13 +51,6 @@ namespace WebHost
 
             _handlers = _registerHandlers();
             appBuilder
-                //.Use(new Func<AppFunc, AppFunc>(next =>
-                
-                //    new AppFunc(env =>
-                //        {
-                //            return next(env);
-                //        }
-                //    )))
                 .Use(typeof(LoggerModule), "Logger module")
                 .Use<HandlersModule>(_handlers)
                 .Use<Error404Module>();

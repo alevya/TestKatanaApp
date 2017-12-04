@@ -121,7 +121,9 @@
     <Compile Include="Modules\HandlersModule\ApiHandler.cs" />
     <Compile Include="Modules\HandlersModule\HandlersModule.cs" />
     <Compile Include="Modules\HandlersModule\HttpCommandAttribute.cs" />
+    <Compile Include="Modules\HandlersModule\HttpEmbeddedResourceAttribute.cs" />
     <Compile Include="Modules\HandlersModule\HttpRequestParams.cs" />
+    <Compile Include="Modules\HandlersModule\HttpResourceAttribute.cs" />
     <Compile Include="Modules\HandlersModule\IHandler.cs" />
     <Compile Include="Modules\LoggerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
