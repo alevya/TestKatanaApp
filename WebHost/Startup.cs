@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.Composition;
-using System.Web;
-using System.Web.Http;
-using Microsoft.Owin;
 using Owin;
 using WebHost.Modules;
 using System.Collections.Concurrent;
 using System.ComponentModel.Composition.Hosting;
 using System.IO;
+using System.Reflection;
 using System.Web.Hosting;
 using WebHost.Modules.HandlersModule;
 
@@ -24,6 +19,9 @@ namespace WebHost
     {
         [ImportMany("HttpCommand")]
         public Lazy<Func<HttpRequestParams, object>, IHttpCommandAttribute>[] RequestReceived { get; set; }
+
+        [ImportMany(typeof(PluginBase))]
+        public HashSet<PluginBase> Plugins { get; set; }
 
         private ConcurrentDictionary<string, IHandler> _handlers = new ConcurrentDictionary<string, IHandler>();
 
@@ -68,6 +66,17 @@ namespace WebHost
                 var h = new ApiHandler(item.Value);
                 handlers.TryAdd(url, h);
             }
+
+            foreach (var item in Plugins )
+            {
+                var type = item.GetType();
+                foreach (var attr in type.GetCustomAttributes<HttpResourceAttribute>())
+                {
+                    var resorceHandler = new ResourceHandler(type.Assembly, attr);
+                    handlers.TryAdd(attr.Url, resorceHandler);
+                }
+            }
+
             return handlers;
         }
     }
