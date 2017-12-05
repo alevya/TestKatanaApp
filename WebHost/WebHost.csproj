@@ -104,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Components\WebUI\Resources\App\index.html" />
+    <Content Include="Components\WebUI\Resources\App\index.js" />
+    <Content Include="Components\WebUI\Resources\App\testModule.js" />
+    <Content Include="Components\WebUI\Resources\Vendor\css\bootstrap.css" />
+    <Content Include="Components\WebUI\Resources\Vendor\js\bootstrap.js" />
+    <Content Include="Components\WebUI\Resources\Vendor\js\jquery-3.2.1.js" />
+    <Content Include="Components\WebUI\Resources\Vendor\js\require.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
