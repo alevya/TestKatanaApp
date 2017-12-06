@@ -1,17 +1,17 @@
 ﻿requirejs.config({
-    baseUrl: "/",
+    baseUrl: "/Components/WebUI/Resources",
     paths:
-        {
-        jquery: "../vendor/js/jquery-3.2.1",
-        bootstrap: "../vendor/js/bootstrap.min"
-        },
-    shim:
-        {
-            bootstrap: ['jquery']
+    {
+        jquery: "/Components/WebUI/Resources/vendor/js/jquery-3.2.1.js"
+        //bootstrap: "/Components/WebUI/Resources/vendor/js/bootstrap.min"
         }
+    //shim:
+    //    {
+    //        bootstrap: ["jquery"]
+    //    }
 });
 
-require(["testModule"],
+require(["/Components/WebUI/Resources/App/testModule.js"],
     function(module, $) {
         $("body").append(module.foo);
         alert("Loaded!");
