@@ -1,6 +1,6 @@
 ﻿define(
-    'testmodule',
-    ['jquery'],
+    "testmodule",
+    ["jquery"],
     function($) {
         return {
             foo: 'Alex'
